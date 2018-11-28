@@ -5,4 +5,6 @@ ENV VIRTUAL_MANAGER_PASS_WORD="6CbYoS28" VIRTUAL_MANAGER_USER_NAME="svc_p_itools
 
 WORKDIR /usr/src/app
 
+ADD . /usr/src/app/
+
 RUN pip install --no-cache-dir requests
