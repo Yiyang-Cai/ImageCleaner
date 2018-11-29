@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'python ImageClean.py staging'
+                sh 'python ImageCleaner.py staging'
 		sh 'sleep 30'
-		sh 'python ImageClean.py staging delete'
+		sh 'python ImageCleaner.py staging delete'
             }
         }
     }
