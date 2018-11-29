@@ -1,11 +1,14 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('Test') {
+        stage('Cleaning') {
             steps {
                 sh 'python ImageCleaner.py staging'
-		sh 'sleep 30'
 		sh 'python ImageCleaner.py staging delete'
+		sh 'sleep 15'
+		sh 'rm -f ImagesClean.csv'
+		sh 'python ImageCleaner.py production'
+		sh 'python ImageCleaner.py production delete'
             }
         }
     }
