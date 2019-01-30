@@ -179,7 +179,7 @@ class Cleaner:
     def DeleteList(self):
         imagesInfo=None
         curr=datetime.now()
-        oneMonthAgo=curr-timedelta(days=30)
+        oneMonthAgo=curr-timedelta(days=25)
         deleteList=list()
         officialList=list()
 
